@@ -1,12 +1,9 @@
-
+import { MainPage } from "./components/MainPage"
 function App() {
-
   return (
-   <div>
-    fasdfas
-    afasdfa
-    fasdfasdaf
-   </div>
+    <div>
+<MainPage/>
+    </div>
   )
 }
 
