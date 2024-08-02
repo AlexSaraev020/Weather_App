@@ -1,8 +1,9 @@
-import { MainPage } from "./components/MainPage"
+import { MainPage } from "./components/mainPage/MainPage"
+
 function App() {
   return (
-    <div>
-<MainPage/>
+    <div className="w-full h-screen">
+      <MainPage />
     </div>
   )
 }
