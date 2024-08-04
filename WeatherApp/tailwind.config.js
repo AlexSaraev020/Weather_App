@@ -28,6 +28,9 @@ export default {
         fadeOut: 'fadeOut 0.5s ease-in-out',
         blink: 'blink 1s infinite both',
       },
+      colors: {
+        'fancyGray': '#62617B'
+      },
     },
   },
   plugins: [],
