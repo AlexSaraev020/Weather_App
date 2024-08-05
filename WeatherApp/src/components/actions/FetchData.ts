@@ -12,6 +12,7 @@ interface DefaultCityProps{
 export const getWeather = async ({city , setWeather} : DefaultCityProps) => {
     try {
         const response = await axios.get(`${apiURL}${city}${apiKey}`)
+
             setWeather(response.data)
     } catch (error) {
         console.error(error)
