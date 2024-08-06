@@ -2,16 +2,17 @@
 interface SearchInputProps {
     setSearchedCity: (city: string) => void;
     handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void
+    cardColor: string | undefined;
 }
 
 
-export const SearchInput: React.FC<SearchInputProps> = ({ setSearchedCity, handleSubmit }) => {
+export const SearchInput: React.FC<SearchInputProps> = ({ setSearchedCity, handleSubmit, cardColor }) => {
     return (
         <form onSubmit={handleSubmit} className="relative w-10/12 sm:w-9/12 md:w-7/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 mx-auto transition-all duration-500 animate-fadeIn ease-in-out">
             <input
                 required
                 onChange={(e) => setSearchedCity(e.target.value)}
-                className="w-full py-1 sm:py-2 px-4 border-2 bg-fancyGray/40 backdrop-blur-xl font-bold text-xl rounded-md focus:outline-none"
+                className={`w-full py-1 sm:py-2 px-4 border-2 bg-gradient-to-r ${cardColor} transition-all duration-500 backdrop-blur-xl font-bold text-xl rounded-md focus:outline-none`}
                 type="search"
                 placeholder="Search"
             />
