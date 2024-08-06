@@ -7,7 +7,6 @@ import { getWeather } from '../actions/FetchData'
 import { weatherSwitcher } from '../actions/OtherFunctionalities'
 import { CardDetails } from './mainPageComponents/CardDetails'
 import ArrowDown from '../../assets/arrowDown.svg?react'
-import './MainPage.css'
 
 export const MainPage = () => {
 
@@ -72,7 +71,7 @@ export const MainPage = () => {
 
     return (
         <div className="w-full h-full flex items-center relative justify-center">
-            <video autoPlay muted loop src={videoBackground} className="no-pointer-events absolute inset-0 z-0 w-full h-full object-cover" />
+            <video autoPlay playsInline controls={false} style={{ pointerEvents: 'none' }} muted loop src={videoBackground} className="absolute inset-0 z-0 w-full h-full object-cover" />
             <div className="bg-black/40 space-y-14 text-white w-full h-full z-10 flex flex-col items-center justify-center p-3 sm:p-4">
                 {weather && (
                     <div className={`pb-10 sm:pb-0 sm:pl-24 relative w-full sm:w-7/12 md:w-8/12 lg:w-6/12 xl:w-5/12 2xl:w-4/12 ${details ? 'max-h-screen' : 'max-h-64 sm:max-h-96'} flex justify-center bg-gradient-to-br  ${cardColor} border-2 backdrop-blur-xl rounded-lg shadow-lg hover:scale-105 transition-all duration-500 animate-fadeIn ease-in-out`}>
